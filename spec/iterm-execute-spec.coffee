@@ -100,3 +100,22 @@ describe "ItermExecute", ->
 
       ItermExecute.runCurrentTestContext()
       expect(ItermExecute.executeCode.calls.length).toEqual(0)
+
+    it "it replaces ! with \! for test titles that include !", ->
+      spyOn(ItermExecute, 'editor').andReturn(
+        getPath: -> "/path/to/project/to/file.rb"
+        getCursorScreenPosition: ->
+          row: 2
+        getText: ->
+          "#ruby comment\n
+            \n
+             test '#index yeah! do something' do\n
+                ruby_code\n
+                get 'something'\n
+                5.times do
+                  something\n
+                end"
+        )
+
+      ItermExecute.runCurrentTestContext()
+      expect(ItermExecute.executeCode).toHaveBeenCalledWith("bundle exec ruby -I test to/file.rb -n /index_yeah\\!_do_something/")

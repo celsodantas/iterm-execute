@@ -40,7 +40,7 @@ class ItermExecute
   @formatTestTitle: (title) ->
     title.replace(/#/g, "")
          .replace(/\ /g, "_")
-      #  .replace(/!/g, "\!")
+         .replace(/!/g, "\\!")
 
   @deactivate: ->
     @subscriptions.dispose()
