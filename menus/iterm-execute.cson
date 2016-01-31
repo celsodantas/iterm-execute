@@ -17,8 +17,12 @@
       'label': 'iTerm Execute'
       'submenu': [
         {
-          'label': 'Run Test Line'
-          'command': 'iterm-execute:toggle'
+          'label': 'Run Ruby Test (File)'
+          'command': 'iterm-execute:run-ruby-test'
+        }
+        {
+          'label': 'Run Ruby Current Test (Context/Line)'
+          'command': 'iterm-execute:run-ruby-current-line-test'
         }
       ]
     ]
