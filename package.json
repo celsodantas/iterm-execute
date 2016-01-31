@@ -2,7 +2,7 @@
   "name": "iterm-execute",
   "main": "./lib/iterm-execute",
   "version": "0.1.0",
-  "description": "A short description of your package",
+  "description": "Sends MiniTest execute commands direct to iTerm (Alpha)",
   "keywords": [],
   "activationCommands": {
     "atom-workspace": [
