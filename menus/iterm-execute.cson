@@ -1,0 +1,26 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Run Ruby Test (File)'
+      'command': 'iterm-execute:run-ruby-test'
+    },
+    {
+      'label': 'Run Ruby Current Test (Context/Line)'
+      'command': 'iterm-execute:run-ruby-current-line-test'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'iTerm Execute'
+      'submenu': [
+        {
+          'label': 'Run Test Line'
+          'command': 'iterm-execute:toggle'
+        }
+      ]
+    ]
+  }
+]

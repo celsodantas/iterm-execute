@@ -1,0 +1,22 @@
+{
+  "name": "iterm-execute",
+  "main": "./lib/iterm-execute",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": [
+      "iterm-execute:run-ruby-test",
+      "iterm-execute:run-ruby-current-line-test"
+    ]
+  },
+  "repository": "https://github.com/celsodantas/iterm-execute",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "node-osascript": "1.0.2"
+  }
+}
