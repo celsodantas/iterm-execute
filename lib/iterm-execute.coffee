@@ -55,12 +55,10 @@ class ItermExecute
     osascript = require 'node-osascript'
 
     command = []
-    command.push 'tell application "iTerm"'
-    command.push '	tell the current terminal'
+    command.push 'tell application "iTerm2"'
+    command.push '	tell current session of first window'
     command.push '		activate current session'
-    command.push '		tell the current session'
-    command.push '			write text code'
-    command.push '		end tell'
+    command.push '		write text code'
     command.push '	end tell'
     command.push 'end tell'
     command = command.join('\n')
