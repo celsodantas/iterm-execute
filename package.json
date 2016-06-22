@@ -1,7 +1,7 @@
 {
   "name": "iterm-execute",
   "main": "./lib/iterm-execute",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sends MiniTest execute commands direct to iTerm (Alpha)",
   "keywords": [],
   "activationCommands": {
